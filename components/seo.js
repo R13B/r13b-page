@@ -6,6 +6,18 @@ export default function SEO(props){
     let url = `${uri}${props.page_url}`;
     return(
         <Head>
+            {/*<!-- Google Analytics -->*/}
+            <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-150111827-1', 'auto');
+            ga('send', 'pageview');
+            </script>
+            <script async src='https://www.google-analytics.com/analytics.js'></script>            
+            {/*<!-- End Google Analytics -->*/}
+            
+            <meta name="author" content="Noé Araújo"/>
+            <link rel="canonical" href={url}/>
+
             {/* // <!-- WEBSITE TITLE & DESCRIPTION --> */}
             <title>{title}</title>
             <meta name="description" content={props.description}/>
@@ -38,16 +50,6 @@ export default function SEO(props){
             <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
             <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png" />
             <link rel="icon" type="image/ico" sizes="32x32" href="/favicon/favicon.ico" />
-
-           {/*!-- Global site tag (gtag.js) - Google Analytics -->*/}
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150111827-1"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'UA-150111827-1');
-            </script>
 
             <link rel="manifest" href={`${uri}/manifest.json`} />
         </Head>

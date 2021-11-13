@@ -18,7 +18,7 @@ export default function Home() {
 
       <header>
         <div className={styles.logo}>
-            <Image src="/images/r13blogo/r13b.logo.svg" alt="R13B logo" height={150} width={250}/>
+            <Image src="/images/r13blogo/r13b.logo.svg" alt-="R13B logo" height={150} width={250}/>
         </div>
 
         <div className={styles.grid_home_menu}>
@@ -52,12 +52,12 @@ export default function Home() {
  
         <div className={styles.grid}>
           <a href="#" className={styles.card}>
-            <Image src="/images/276x150.test.png" width={368} height={204}/>
+            <Image src="/images/276x150.test.png" alt-="R13B banner 1" width={368} height={204}/>
             <h2>Game os War: Exemple</h2>
           </a>
 
           <a href="#" className={styles.card}>
-          <Image src="/images/276x150.test.png" width={368} height={204}/>
+          <Image src="/images/276x150.test.png" alt-="R13B banner 2" width={368} height={204}/>
             <h2>Jogo de Cartas: Game do Ano</h2>
           </a>
 
@@ -65,7 +65,7 @@ export default function Home() {
             href="#"
             className={styles.card}
           >
-            <Image src="/images/276x150.test.png" width={368} height={204}/>
+            <Image src="/images/276x150.test.png" alt-="R13B banner 3" width={368} height={204}/>
             <h2>Um Super Jogo: Melhor Jogo</h2>
           </a>
 

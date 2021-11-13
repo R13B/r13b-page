@@ -5,13 +5,14 @@ export default function SEO(props){
     let uri = process.env.PAGE_URI; 
     let url = `${uri}${props.page_url}`;
     return(
+        //o dangeruslySetInnerHTML é o innerHTML do navegador, onde a gente pode injetar elementos HTML... só que o React coloca perigo para avizar
         <Head>
             {/*<!-- Google Analytics -->*/}
-            <script>
-            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga(&lsquo;create&rsquo;, &lsquo;UA-150111827-1&rsquo;, &lsquo;auto&rsquo;);
-            ga(&lsquo;send&rsquo;, &lsquo;pageview&rsquo;);
-            </script>
+            <script async dangerouslySetInnerHTML={{
+                __html: `window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+                ga('create', 'UA-150111827-1', 'auto');
+                ga('send', 'pageview');`
+            }} />
             <script async src='https://www.google-analytics.com/analytics.js'></script>            
             {/*<!-- End Google Analytics -->*/}
             

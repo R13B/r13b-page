@@ -9,8 +9,8 @@ export default function SEO(props){
             {/*<!-- Google Analytics -->*/}
             <script>
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', 'UA-150111827-1', 'auto');
-            ga('send', 'pageview');
+            ga(&lsquo;create&rsquo;, &lsquo;UA-150111827-1&rsquo;, &lsquo;auto&rsquo;);
+            ga(&lsquo;send&rsquo;, &lsquo;pageview&rsquo;);
             </script>
             <script async src='https://www.google-analytics.com/analytics.js'></script>            
             {/*<!-- End Google Analytics -->*/}

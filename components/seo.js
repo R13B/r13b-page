@@ -10,10 +10,12 @@ export default function SEO(props){
         <div>
             {/*<!-- Google Analytics -->*/}
             <Script id="google-analytics" strategy="afterInteractive">
-                window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-                ga('create', 'UA-150111827-1', 'auto');
-                ga('send', 'pageview');
-                </Script>
+                {`
+                    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+                    ga('create', 'UA-150111827-1', 'auto');
+                    ga('send', 'pageview');
+                `}
+            </Script>
             <Script src='https://www.google-analytics.com/analytics.js' strategy="afterInteractive"/>           
             {/*<!-- End Google Analytics -->*/}
 

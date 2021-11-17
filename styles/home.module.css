@@ -10,6 +10,11 @@
   'footer';
 }
 
+.img{
+  max-width: 100%;
+  height: auto;
+}
+
 .nav{
   grid-area: nav;
 }
@@ -33,10 +38,11 @@
 }
 
 .logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   min-height: 92px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  width: 225px;
 }
 
 .grid_home_menu {

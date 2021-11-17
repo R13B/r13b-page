@@ -1,9 +1,18 @@
 import SEO from '../components/seo'
-import Image from 'next/image'
 import styles from '../styles/home.module.css'
 import Footer from '../components/footer'
 import Link from 'next/link'
 
+function Card(props){
+  return (
+    <Link href={props.href}>
+      <a className={styles.card}>
+        <img className={styles.img} src= {props.src} alt={props.alt} />
+        <h2>{props.title}</h2>
+      </a>
+    </Link>
+  )
+}
 
 export default function Home() {
   return (
@@ -17,7 +26,7 @@ export default function Home() {
 
       <header>
         <div className={styles.logo}>
-            <Image src="/images/r13blogo/r13b.logo.svg" alt-="R13B logo" height={150} width={250}/>
+            <img className={styles.img} src={'/images/r13blogo/r13b.logo.svg'} alt="R13B logo"/>
         </div>
 
         <div className={styles.grid_home_menu}>
@@ -50,23 +59,11 @@ export default function Home() {
       <main className={styles.main}>
  
         <div className={styles.grid}>
-          <a href="#" className={styles.card}>
-            <Image src="/images/276x150.test.png" alt-="R13B banner 1" width={368} height={204}/>
-            <h2>Game os War: Exemple</h2>
-          </a>
+            <Card href="#" src= {'/images/368x204.test.png'} alt="R13B banner 1" title="Game os War: Exemple"/>
 
-          <a href="#" className={styles.card}>
-          <Image src="/images/276x150.test.png" alt-="R13B banner 2" width={368} height={204}/>
-            <h2>Jogo de Cartas: Game do Ano</h2>
-          </a>
+            <Card href="#" src={'/images/368x204.test.png'} alt="R13B banner 2" title="Jogo de Cartas: Game do Ano"/>
 
-          <a
-            href="#"
-            className={styles.card}
-          >
-            <Image src="/images/276x150.test.png" alt-="R13B banner 3" width={368} height={204}/>
-            <h2>Um Super Jogo: Melhor Jogo</h2>
-          </a>
+            <Card href="#" src={'/images/368x204.test.png'} alt="R13B banner 3" title="Um Super Jogo: Melhor Jogo"/>
 
         </div>
       </main>

@@ -7,6 +7,14 @@ export default function SEO(props){
     let url = `${uri}${props.page_url}`;
     return(
         <>
+            <Script id="redirect-2-r13b.com" strategy="beforeInteractive">
+                {`
+                    if (window.location.hostname !== "r13b.com" &&  window.location.hostname !== "www.r13b.com" &&  window.location.hostname !== "localhost"){
+                        window.top.location.href = ${url};
+                    }
+                `}
+            </Script>
+
             <Head>
                 <meta name="author" content="Noé Araújo"/>
                 <link rel="canonical" href={url}/>

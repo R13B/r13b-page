@@ -3,7 +3,7 @@ import Script from 'next/script'
 
 export default function SEO(props){
     let title = `${props.title} - R13B`;
-    let uri = process.env.PAGE_URI; 
+    let uri = process.env.NEXT_PUBLIC_URI; 
     let url = `${uri + props.page_url}`;
     const URL = url;
     return(

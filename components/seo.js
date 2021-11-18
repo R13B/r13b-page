@@ -3,16 +3,17 @@ import Script from 'next/script'
 
 export default function SEO(props){
     let title = `${props.title} - R13B`;
-    let uri = process.env.NEXT_PUBLIC_URI; 
+    let uri = process.env.NEXT_PUBLIC_HOST;
+    console.log(uri);
     let url = `${uri + props.page_url}`;
-    const URL = url;
+    console.log(url);
     return(
         <>
 
             <Script id="redirect-2-r13b"dangerouslySetInnerHTML={{
                 __html: `
                 if (window.location.hostname !== "r13b.com" &&  window.location.hostname !== "www.r13b.com" &&  window.location.hostname !== "localhost"){
-                    window.top.location.href = ${url};
+                    window.top.location.href = "https://r13b.com";
                 }
             `,
             }}

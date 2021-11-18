@@ -22,6 +22,7 @@ export default function Home() {
               description="The official website of the game development company R13B."
               page_url="" 
       />
+      
       <nav className={styles.nav}> v0.1 </nav>
 
       <header>

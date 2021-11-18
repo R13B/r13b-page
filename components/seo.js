@@ -5,15 +5,18 @@ export default function SEO(props){
     let title = `${props.title} - R13B`;
     let uri = process.env.PAGE_URI; 
     let url = `${uri + props.page_url}`;
+    const URL = url;
     return(
         <>
-            <Script id="redirect-2-r13b.com" strategy="beforeInteractive">
-                {`
-                    if (window.location.hostname !== "r13b.com" &&  window.location.hostname !== "www.r13b.com" &&  window.location.hostname !== "localhost"){
-                        window.top.location.href = ${url};
-                    }
-                `}
-            </Script>
+
+            <Script id="redirect-2-r13b"dangerouslySetInnerHTML={{
+                __html: `
+                if (window.location.hostname !== "r13b.com" &&  window.location.hostname !== "www.r13b.com" &&  window.location.hostname !== "localhost"){
+                    window.top.location.href = "https://r13b.com";
+                }
+            `,
+            }}
+            />
 
             <Head>
                 <meta name="author" content="Noé Araújo"/>

@@ -12,7 +12,7 @@ export default function SEO(props){
             <Script id="redirect-2-r13b"dangerouslySetInnerHTML={{
                 __html: `
                 if (window.location.hostname !== "r13b.com" &&  window.location.hostname !== "www.r13b.com" &&  window.location.hostname !== "localhost"){
-                    window.top.location.href = "https://r13b.com";
+                    window.top.location.href = ${url};
                 }
             `,
             }}

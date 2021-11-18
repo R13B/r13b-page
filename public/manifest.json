@@ -1,31 +1,47 @@
-{
-    "short_name": "R13B",
+  {
     "name": "R13B",
-    "icons": [
-      {
-        "src": "/favicon/icon-vector.svg",
-        "type": "image/svg+xml",
-        "sizes": "512x512"
-      },
-      {
-        "src": "/favicon/android-icon-192x192.png",
-        "type": "image/png",
-        "sizes": "192x192",
-        "purpose": "maskable"
-      },
-      {
-        "src": "/favicon/android-icon-192x192.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "/favicon/chrome-icon.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ],
-    "start_url": ".",
+    "short_name": "R13B",
+    "start_url": "/",
     "display": "standalone",
+    "description": "R13B app",
+    "dir": "ltr",
+    "categories": "entertainment,games",
+    "lang": "en",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "background_color": "#302840",
     "theme_color": "#302840",
-    "background_color": "#302840"
-  }
+    "icons": [
+        {
+            "src": "/favicon/apple-icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/favicon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/apple-icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+          "src": "/favicon/android-icon-192x192.png",
+          "type": "image/png",
+          "sizes": "192x192",
+          "purpose": "maskable"
+        },
+        {
+            "src": "/favicon/android-icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+          "src": "/favicon/chrome-icon.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+    ]
+}

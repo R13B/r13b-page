@@ -4,7 +4,7 @@ import Script from 'next/script'
 export default function SEO(props){
     let title = `${props.title} - R13B`;
     let uri = process.env.PAGE_URI; 
-    let url = `${uri}${props.page_url}`;
+    let url = `${uri + props.page_url}`;
     return(
         <>
             <Script id="redirect-2-r13b.com" strategy="beforeInteractive">
@@ -17,7 +17,9 @@ export default function SEO(props){
 
             <Head>
                 <meta name="author" content="Noé Araújo"/>
-                <link rel="canonical" href={url}/>
+                <link rel="canonical" href={url+"/"} />
+                <meta name="theme-color" content="#302840"/>
+                <meta name="apple-mobile-web-app-status-bar" content="#302840" />
 
                 {/* // <!-- WEBSITE TITLE & DESCRIPTION --> */}
                 <title>{title}</title>
@@ -52,7 +54,7 @@ export default function SEO(props){
                 <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png" />
                 <link rel="icon" type="image/ico" sizes="32x32" href="/favicon/favicon.ico" />
 
-                <link rel="manifest" href={`${uri}/manifest.json`} />
+                <link rel="manifest" href="/manifest.json" />
             </Head>
 
             <Script id="google-analytics" strategy="afterInteractive">

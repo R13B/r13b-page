@@ -7,8 +7,18 @@ function Card(props){
   return (
     <Link href={props.href}>
       <a className={styles.card}>
-        <img className={styles.img} src= {props.src} alt={props.alt} />
-        <h2>{props.title}</h2>
+        <img className={styles.card__img} src= {props.src} alt={props.alt} />
+        <h2 className={styles.card__title_config}>{props.title}</h2>
+      </a>
+    </Link>
+  )
+}
+
+function Btn(props){
+  return (
+    <Link href={props.href}>
+      <a className={styles.menu__btn_white}>
+        <h2 className={styles.menu__btn_textscale}>{props.children}</h2>
       </a>
     </Link>
   )
@@ -16,48 +26,29 @@ function Card(props){
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="container">
       <SEO
               title="Home"
               description="The official website of the game development company R13B."
               page_url="" 
       />
       
-      <nav className={styles.nav}> v0.1 </nav>
+      <nav className="container__nav"> v0.1 </nav>
 
-      <header>
+      <header className="container__header">
         <div className={styles.logo}>
-            <img className={styles.img} src={'/images/r13blogo/r13b.logo.svg'} alt="R13B logo"/>
+            <img className={styles.logo__img} src={'/images/r13blogo/r13b.logo.svg'} alt="R13B logo"/>
         </div>
 
-        <div className={styles.grid_home_menu}>
-            <Link href="/apps">
-              <a>
-                <h2>APPS</h2>
-              </a>
-            </Link>
-
-            <Link href="/games">
-              <a>
-                <h2>GAMES</h2>
-              </a>
-            </Link>
-
-            <Link href="/eu">
-              <a>
-                <h2>EU</h2>
-              </a>
-            </Link>
-
-            <Link href="/eu/contact">
-              <a>
-                <h2>CONTACT</h2>
-              </a>
-            </Link>
+        <div className={styles.menu}>
+            <Btn href = "/apps" >APPS</Btn>
+            <Btn href = "/games" >GAMES</Btn>
+            <Btn href = "/eu" >EU</Btn>
+            <Btn href = "/eu/contact" >CONTACT</Btn>
         </div>
       </header>
       
-      <main className={styles.main}>
+      <main className="container__main">
  
         <div className={styles.grid}>
             <Card href="#" src= {'/images/368x204.test.png'} alt="R13B banner 1" title="Game os War: Exemple"/>

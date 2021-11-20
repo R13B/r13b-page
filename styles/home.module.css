@@ -1,41 +1,4 @@
-.container {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: auto auto 1fr auto;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  'nav'
-  'header'
-  'main'
-  'footer';
-}
-
-.img{
-  max-width: 100%;
-  height: auto;
-}
-
-.nav{
-  grid-area: nav;
-}
-
-.header {
-  grid-area: header;
-}
-
-.main {
-  grid-area: main;
-}
-
-.footer {
-  color: #9081af;
-  text-align: center;
-  grid-area: footer;
-}
-
-.nav, .main, .footer{
-  padding: 1rem;
-}
+/* Usando a metodologia BEM .block-name__element-name_modifier-name_modifier-key*/
 
 .logo {
   display: block;
@@ -46,7 +9,13 @@
   width: 225px;
 }
 
-.grid_home_menu {
+  .logo__img{
+    max-width: 100%;
+    height: auto;
+  }
+
+
+.menu {
   display: flex;
   align-items: center;
   padding-bottom: 2rem;
@@ -54,23 +23,24 @@
   flex-wrap: wrap;
 }
 
-.grid_home_menu a{
-  margin: 0.2rem;
-  padding: 0.005rem;
-  text-align: center;
-  color: #f4f1de;
-  cursor: pointer;
-}
+  .menu__btn_white{
+    margin: 0.2rem;
+    padding: 0.005rem;
+    text-align: center;
+    color: #f4f1de;
+    cursor: pointer;
+  }
 
-.grid_home_menu h2 {
-  font-size: 1rem;
-  margin: 0.6rem;
-}
+  .menu__btn_white:hover {
+    color: #302840;
+    background-color: #f4f1de;
+  }
 
-.grid_home_menu a:hover {
-  color: #302840;
-  background-color: #f4f1de;
-}
+  .menu__btn_textscale {
+    font-size: 1rem;
+    margin: 0.6rem;
+  }
+
 
 .grid {
   display: grid;
@@ -80,6 +50,7 @@
   grid-gap: 0 24px;
   margin: 25px auto;
 }
+
 
 .card {
   text-align: left;
@@ -101,19 +72,27 @@
   background-image: linear-gradient(#846eac,#413755),linear-gradient(0deg,#413755,#e07a5f);
 }
 
-.card h2 {
-  padding: 1rem;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
-}
+  .card__img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card__title_config {
+    padding: 1rem;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
 
 /* Pequenos aparelhos de 600px pra baixo*/
 @media (max-width: 600px) {
 }
 
+
 /* Potrait tablets e phones de 600px pra cima*/
 @media (min-width: 600px){
 }
+
 
 /* tablets em landscap, 768px pra cima*/
 @media (min-width: 768px){
@@ -122,10 +101,12 @@
   }
 }
 
+
 /* laptops/descktops, 992px pra cima */
 @media (min-width: 992px) {
   
 }
+
 
 /* telas largas, 1200px pra cima*/
 @media (min-width: 1310px) {
@@ -134,17 +115,20 @@
   }
 }
 
+
 @media (min-width: 1920px) {
   .grid{
     width: 60%;
   }
 }
 
+
 @media (min-width: 2000px) {
   .grid{
     width: 50%;
   }
 }
+
 
 @media (min-width: 3192px) {
   .grid{

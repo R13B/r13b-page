@@ -16,3 +16,41 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Usando a metodologia BEM .block-name__element-name_modifier-name_modifier-key*/
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  'nav'
+  'header'
+  'main'
+  'footer';
+}
+
+  .container__nav{
+    grid-area: nav;
+    padding: 1rem;
+  }
+
+  .container__header {
+    grid-area: header;
+  }
+
+  .container__main {
+    grid-area: main;
+    padding: 1rem;
+  }
+
+  .container__footer {
+    text-align: center;
+    grid-area: footer;
+    padding: 1rem;
+  }
+
+    .container__footer_text-color {
+      color: #9081af;
+    }

@@ -1,8 +1,6 @@
-import styles from '../styles/home.module.css'
-
 export default function Footer(){
     return(
-        <footer className={styles.footer}>
+        <footer className="container__footer container__footer_text-color">
             <div>&copy; {new Date().getFullYear()} R13B. All rights reserved.</div>
         </footer>
     )

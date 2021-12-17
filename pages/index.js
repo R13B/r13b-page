@@ -17,7 +17,7 @@ function Card(props){
 function Btn(props){
   return (
     <Link href={props.href}>
-      <a className={styles.menu__btn_white}>
+      <a className={styles.menu__btn_red}>
         <h2 className={styles.menu__btn_textscale}>{props.children}</h2>
       </a>
     </Link>
@@ -41,8 +41,7 @@ export default function Home() {
         </div>
 
         <div className={styles.menu}>
-            <Btn href = "/apps" >APPS</Btn>
-            <Btn href = "/games" >GAMES</Btn>
+            <Btn href = "/" >GAMES</Btn>
             <Btn href = "/eu" >EU</Btn>
             <Btn href = "/eu/contact" >CONTACT</Btn>
         </div>

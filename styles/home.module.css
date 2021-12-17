@@ -24,6 +24,8 @@
 }
 
   .menu__btn_white{
+    border: 0;
+    border-radius: 20px;
     margin: 0.2rem;
     padding: 0.005rem;
     text-align: center;
@@ -35,6 +37,21 @@
     color: #302840;
     background-color: #f4f1de;
   }
+
+    .menu__btn_red{
+    border: 0;
+    border-radius: 20px;
+    margin: 0.2rem;
+    padding: 0.005rem;
+    text-align: center;
+    color: #f4f1de;
+    cursor: pointer;
+  }
+
+  .menu__btn_red:hover {
+    color: #302840;
+    background-color: #e07a5f;
+  }  
 
   .menu__btn_textscale {
     font-size: 1rem;
@@ -53,6 +70,8 @@
 
 
 .card {
+  border: 0;
+  border-radius: 2.5px;
   text-align: left;
   color:  #cfcdc3;
   text-decoration: none;

@@ -22,6 +22,7 @@ export default function SEO(props){
             <Head>
                 <meta name="author" content="Noé Araújo"/>
                 <link rel="canonical" href={url+"/"} />
+                <meta name="msapplication-TileColor" content="#302840" />
                 <meta name="theme-color" content="#302840"/>
                 <meta name="apple-mobile-web-app-status-bar" content="#302840" />
 
@@ -56,7 +57,10 @@ export default function SEO(props){
                 <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
                 <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png" />
-                <link rel="icon" type="image/ico" sizes="32x32" href="/favicon/favicon.ico" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+                <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
 
                 <link rel="manifest" href="/manifest.json" />
             </Head>

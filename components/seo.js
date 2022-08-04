@@ -74,14 +74,16 @@ export default function SEO(props){
             </Script>
             <Script src='https://www.google-analytics.com/analytics.js' strategy="afterInteractive"/>
                 
-            <!-- fluxo de dados Google tag (gtag.js) -->
+                {/*<!-- fluxo de dados Google tag (gtag.js) -->*/}
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-8S27KCDYHG"></script>
             <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
 
-                gtag('config', 'G-8S27KCDYHG');
+                    gtag('config', 'G-8S27KCDYHG');
+                `}
             </script>
         </>
     );

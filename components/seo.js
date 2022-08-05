@@ -73,19 +73,7 @@ export default function SEO(props){
                     ga('send', 'pageview');
                 `}
             </Script>
-            <Script src='https://www.google-analytics.com/analytics.js' strategy="afterInteractive"/>
-                
-                {/*<!-- fluxo de dados Google tag (gtag.js) -->*/}
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-8S27KCDYHG" strategy="afterInteractive"/>
-            <Script>
-                {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', 'G-8S27KCDYHG');
-                `}
-            </Script>
+            <Script src='https://www.google-analytics.com/analytics.js' strategy="afterInteractive"/>            
         </>
     );
 }

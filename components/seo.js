@@ -65,6 +65,9 @@ export default function SEO(props){
 
                 <link rel="manifest" href="/manifest.json" />
             </Head>
+			
+			{/*<!-- Cloudflare Web Analytics -->*/}
+			<Script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "abe3d30cbbd4400eb421d6908d674ab1"}' />
 
             <Script id="google-analytics" strategy="afterInteractive">
                 {`
@@ -73,7 +76,7 @@ export default function SEO(props){
                     ga('send', 'pageview');
                 `}
             </Script>
-            <Script src='https://www.google-analytics.com/analytics.js' strategy="afterInteractive"/>            
+            <Script src='https://www.google-analytics.com/analytics.js' strategy="afterInteractive"/>			
         </>
     );
 }

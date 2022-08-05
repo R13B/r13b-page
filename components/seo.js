@@ -25,6 +25,7 @@ export default function SEO(props){
                 <meta name="msapplication-TileColor" content="#302840" />
                 <meta name="theme-color" content="#302840"/>
                 <meta name="apple-mobile-web-app-status-bar" content="#302840" />
+				<meta name="naver-site-verification" content="15f3c31399f4583975c8a5a4007b9a5567f18c57" />
 
                 {/* // <!-- WEBSITE TITLE & DESCRIPTION --> */}
                 <title>{title}</title>
@@ -75,8 +76,8 @@ export default function SEO(props){
             <Script src='https://www.google-analytics.com/analytics.js' strategy="afterInteractive"/>
                 
                 {/*<!-- fluxo de dados Google tag (gtag.js) -->*/}
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-8S27KCDYHG"></script>
-            <script>
+            <Script src="https://www.googletagmanager.com/gtag/js?id=G-8S27KCDYHG" strategy="afterInteractive"></Script>
+            <Script>
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
@@ -84,7 +85,7 @@ export default function SEO(props){
 
                     gtag('config', 'G-8S27KCDYHG');
                 `}
-            </script>
+            </Script>
         </>
     );
 }
